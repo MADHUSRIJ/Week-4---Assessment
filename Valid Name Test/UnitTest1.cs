@@ -6,7 +6,7 @@ namespace Valid_Name_Test
     public class UnitTest1
     {
         [TestMethod]
-        public void TestInvalidNameHerbert()
+        public void TestInvalidName_Herbert()
         {
             Program program = new Program();
             Result ActualResult = program.ValidateName("Herbert");
@@ -21,7 +21,7 @@ namespace Valid_Name_Test
         }
 
         [TestMethod]
-        public void TestInvalidNameH_Wells()
+        public void TestInvalidName_H_Wells()
         {
             Program program = new Program();
             Result ActualResult = program.ValidateName("H Wells");
@@ -36,7 +36,7 @@ namespace Valid_Name_Test
         }
 
         [TestMethod]
-        public void TestInvalidNameHDot_G_Wells()
+        public void TestInvalidName_HDot_G_Wells()
         {
             Program program = new Program();
             Result ActualResult = program.ValidateName("H. G Wells");
@@ -51,7 +51,7 @@ namespace Valid_Name_Test
         }
 
         [TestMethod]
-        public void TestInvalidNamehDotWells()
+        public void TestInvalidName_hDot_Wells()
         {
             Program program = new Program();
             Result ActualResult = program.ValidateName("h. Wells");
@@ -66,7 +66,7 @@ namespace Valid_Name_Test
         }
 
         [TestMethod]
-        public void TestInvalidNameHDotwells()
+        public void TestInvalidName_HDot_wells()
         {
             Program program = new Program();
             Result ActualResult = program.ValidateName("H. wells");
@@ -81,7 +81,7 @@ namespace Valid_Name_Test
         }
 
         [TestMethod]
-        public void TestInvalidNamehDotgDotWells()
+        public void TestInvalidName_hDot_gDot_Wells()
         {
             Program program = new Program();
             Result ActualResult = program.ValidateName("h. g. Wells");
@@ -96,7 +96,7 @@ namespace Valid_Name_Test
         }
 
         [TestMethod]
-        public void TestInvalidNameHDotGeorgeDotWells()
+        public void TestInvalidName_HDot_GeorgeDot_Wells()
         {
             Program program = new Program();
             Result ActualResult = program.ValidateName("H. George Wells");
@@ -111,7 +111,7 @@ namespace Valid_Name_Test
         }
 
         [TestMethod]
-        public void TestInvalidNameHDotGDotWDot()
+        public void TestInvalidName_HDot_GDot_WDot()
         {
             Program program = new Program();
             Result ActualResult = program.ValidateName("H. G. W.");
@@ -126,7 +126,7 @@ namespace Valid_Name_Test
         }
 
         [TestMethod]
-        public void TestInvalidNameHerbDotGDotWells()
+        public void TestInvalidName_HerbDot_GDot_Wells()
         {
             Program program = new Program();
             Result ActualResult = program.ValidateName("Herb. G. Wells");
@@ -141,7 +141,7 @@ namespace Valid_Name_Test
         }
 
         [TestMethod]
-        public void TestValidNameHDot_Wells()
+        public void TestValidName_HDot_Wells()
         {
             Program program = new Program();
             Result ActualResult = program.ValidateName("H. Wells");
@@ -156,7 +156,7 @@ namespace Valid_Name_Test
         }
 
         [TestMethod]
-        public void TestValidNameHDot_GDot_Wells()
+        public void TestValidName_HDot_GDot_Wells()
         {
             Program program = new Program();
             Result ActualResult = program.ValidateName("H. G. Wells");
@@ -171,7 +171,7 @@ namespace Valid_Name_Test
         }
 
         [TestMethod]
-        public void TestValidNameHerbert_GDot_Wells()
+        public void TestValidName_Herbert_GDot_Wells()
         {
             Program program = new Program();
             Result ActualResult = program.ValidateName("Herbert G. Wells");
@@ -185,7 +185,7 @@ namespace Valid_Name_Test
             Assert.AreEqual(ExpectedResult.Message, ActualResult.Message);
         }
         [TestMethod]
-        public void TestValidNameHerbert_George_Wells()
+        public void TestValidName_Herbert_George_Wells()
         {
             Program program = new Program();
             Result ActualResult = program.ValidateName("Herbert George Wells");
