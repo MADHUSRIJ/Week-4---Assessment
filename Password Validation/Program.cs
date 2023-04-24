@@ -45,7 +45,7 @@
                 return result;
             }
 
-            String AllowedSpecialCharacters = "! @ # $ % ^ & * ( ) + = _ - { } : ; \" ' ? < > , .";
+            String AllowedSpecialCharacters = "!@#$%^&*()+=_-{}:;\"'?<>,.";
             bool UpperCase = false;
             bool LowerCase = false;
             bool Number = false;
@@ -53,19 +53,19 @@
             //Check for Uppercase, Lowercase, Numbers and allowed special characters in Password
             foreach (char character in PasswordString)
             {
-                if (Char.IsUpper(character))
+                if (char.IsUpper(character))
                 {
                     UpperCase = true;
                 }
-                if (Char.IsLower(character))
+                if (char.IsLower(character))
                 {
                     LowerCase = true;
                 }
-                if (Char.IsNumber(character))
+                if (char.IsNumber(character))
                 {
                     Number = true;
                 }
-                if (!Char.IsLetterOrDigit(character))
+                if (char.IsSymbol(character))
                 {
                     if(!AllowedSpecialCharacters.Contains(character))
                     {
@@ -125,6 +125,7 @@
 
             for(int PasswordStringIndex = 1; PasswordStringIndex<PasswordString.Length; PasswordStringIndex++)
             {
+                Console.WriteLine(PasswordString[PasswordStringIndex]+" "+Count+" "+PreviousCharacter);
                 if (Count > 2)
                 {
                     return true;
@@ -135,7 +136,7 @@
                 }
                 else
                 {
-                    Count = 0;
+                    Count = 1;
                     PreviousCharacter = PasswordString[PasswordStringIndex];
                 }
                 
